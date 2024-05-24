@@ -29,16 +29,22 @@ Run migrations:
 php migrate
 
 Start the server:
-php -S localhost:8000 -t public
 
-Test the application:
+   ```sh
+      php -S localhost:8000 -t public`''
 
-Open your browser and navigate to http://localhost:8000.
+#Test the application:
+
+Open your browser and navigate to:
+
+```sh
+ http://localhost:8000.
 
 Usage
 Example Routes
 Users:
 
+   ```sh
 GET /api/users - Retrieve all users
 POST /api/users - Create a new user
 GET /api/users/{id} - Retrieve a specific user
@@ -46,14 +52,15 @@ PUT /api/users/{id} - Update a specific user
 DELETE /api/users/{id} - Delete a specific user
 
 Skills:
-
+   ```sh
 GET /api/skills - Retrieve all skills
 POST /api/skills - Create a new skill
 GET /api/skills/{id} - Retrieve a specific skill
 PUT /api/skills/{id} - Update a specific skill
 DELETE /api/skills/{id} - Delete a specific skill
-Messages:
 
+Messages:
+   ```sh
 GET /api/messages - Retrieve all messages
 POST /api/messages - Create a new message
 GET /api/messages/{id} - Retrieve a specific message
@@ -63,6 +70,8 @@ To secure routes with authentication middleware:
 
 php
 Copier le code
+   ```sh
+
 $router->get('/api/users/{id}/delete', function($id) use ($authMiddleware) {
     $authMiddleware->handle();
     $controller = new UserController();
@@ -75,8 +84,9 @@ In your controllers, you can handle JSON requests using the content() method:
 
 php
 Copier le code
+   ```sh
 $data = $this->content();
 
 Handling File Uploads
-To handle file uploads, you can use the $_FILES superglobal and move uploaded files as needed.
+To handle file uploads, you can use the    ```sh $_FILES superglobal and move uploaded files as needed.
 
