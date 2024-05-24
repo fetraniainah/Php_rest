@@ -19,7 +19,7 @@ MyORM Project is a simple, object-oriented PHP ORM (Object-Relational Mapping) s
 
 1. **Clone the repository:**
 
-   ```sh
+   ```php
    git clone https://github.com/yourusername/MyORM-Project.git
 composer install
 Configure the database:
@@ -30,29 +30,29 @@ php migrate
 
 Start the server:
 
-   ```sh
+   ```php
       php -S localhost:8000 -t public`''
 
 #Test the application:
 
 Open your browser and navigate to:
 
-```sh
+```php
  http://localhost:8000.
 
 Usage
 Example Routes
 Users:
 
-   ```sh
+   ```php
 GET /api/users - Retrieve all users
 POST /api/users - Create a new user
 GET /api/users/{id} - Retrieve a specific user
 PUT /api/users/{id} - Update a specific user
-DELETE /api/users/{id} - Delete a specific user
+DELETE /api/users/{id} - Delete a specific user```
 
 Skills:
-   ```sh
+   ```
 GET /api/skills - Retrieve all skills
 POST /api/skills - Create a new skill
 GET /api/skills/{id} - Retrieve a specific skill
