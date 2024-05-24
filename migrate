@@ -1,0 +1,10 @@
+<?php
+require_once 'autoload.php';
+
+use app\core\Migration;
+Migration::migrate();
+
+$reponse = fgets(STDIN);
+print('----------------------------------------------Migration Updated----------------------------------------');
+echo "Vous avez entré : " . $reponse;
+?>
